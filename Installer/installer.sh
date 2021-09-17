@@ -36,7 +36,7 @@ conclude_setup() {
   cleanup "${support_dir}"
   printfn "${b}Setup complete${n}. Booting via the bootloader will enable eGPUs."
   printfn "To boot a clean system, simply boot without the bootloader.\n"
-  printfn "${b}More configuration${n}: ${u}https://github.com/mayankk2308/kryptonite#post-install${n}"
+  printfn "${b}More configuration${n}: ${u}https://github.com/mayankk2308/kryptonite/wiki/Post-Install${n}"
 }
 
 # Prepare and set boot arguments.
@@ -56,7 +56,7 @@ set_bootargs() {
 # Disable discrete GPU if requested.
 disable_dgpu() {
   local pfile="${1}"
-  
+
   if [ "${requirements_disabledgpu}" = 0 ]; then
     printfn "Not disabling discrete GPU if present, as configured."
     return 0
